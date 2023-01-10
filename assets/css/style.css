@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background: white;
+}
+
+::selection {
+    color: purple;
+    background: white;
+}
+
+.title_header {
+    width: 1200px;
+    height: 500px;
+}
+
+h1{
+    position: absolute;
+    text-align: center;
+    left: 38%;
+    top: 10%;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.rules {
+    position: absolute;
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    font-size: 25px;
+    left: 34%;
+    top: 25%;
+    
+}
+.start_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: purple;
+}
+
+.start_btn button {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background: purple;
+    cursor: pointer;
+}
+
+.View_Highscores_btn {
+    position: absolute;
+    top: 0%;
+    font-size: 15px;
+    font-weight: 100;
+    color: white;
+    background:purple;
+    border-radius: 6px;
+    padding: 2px 2px;
+    cursor: pointer;
+}
+
+.timer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+    background:purple;
+    border-radius: 6px;
+    padding: 4px 2px;
+    cursor: pointer;
+}
+
+.time_sec {
+    position: relative;
+    left: 40px;
+    top: 3px;
+}

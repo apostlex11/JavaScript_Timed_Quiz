@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Javascript Code Quiz</title>
-        <link rel="stylesheet" href="./assets/css/reset.css">
-        <link rel="stylesheet" href="./assets/css/style.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JavaScript Quiz</title>
+        <link rel="stylesheet" href="assets/style.css" />
     </head>
-<body>
-    <!--Quiz Rules-->
-    <div class="title_header">
-        <h1>Coding Quiz Challenge</h1>
-            <p class = "rules"> Try to answer the following code-related questions within the time limit.
-                Keep in mind that incorrect answers will penalize your scoretime by 10 seconds!
-            </p>
-    </div>
-
-    <!--Start Button for Quiz-->
-    <div class="start_btn">
-        <button>Start Quiz</button>
-    </div>
-
-    <!--View Highscore on top left corner of screen-->
-<div class="View_Highscores">
-        <button class ="View_Highscores_btn">View Highscores</button>
-</div>
-
-    <!--Quiz Question Box-->
-     <div class="quiz_question">
-        <header>
-            <!--Timer classes added-->
-            <div class ="quiz_title">Terry's Code Quiz</div>
-            <div class="timer">
-                <div class="time_left">Time Left</div>
-                <div class="time_sec">60</div>
-            </div>
-        </header>
-        <section>
-            <div class="question_text"></div>
-            <div class="answer_choices"></div>
-        </section>
-        <footer>
-            <div class="score_count"></div>
-            <button class="next_question">Next Question</button>
-        </footer>
-    </div>
-
-    <div class="complete_box">
-        <div class="completed_text">Congrats! You've Finished the Quiz!</div>
-        <div class="final_score"></div>
-        <div class="restart_btn"><button>Replay</button></div>
-        <div class="quit_btn"><button>Quit</button></div>
-    </div>
-
-</body>
-</html>
-
-
-
-
-
-
-
     
+    <body>
+        <section id="section1">
+            <h1>Quiz Time!</h1>
+            <p class="intro">
+                This Quiz is timed, make sure you choose your answer percisely and quickly.
+                Every wrong answer is penalized time!
+            </p>
+        </section>
+        
+        <div class="inlinediv">
+            <button id="startBTN">Start quiz</button>
+            <h2 class="timer">Time: 75</h2>
+            <button id="leaderBoard">View LeaderBoard</button>
+            <form class="formBack">
+                <button id="resetBTN">Go Back</button>
+            </form>
+        </div>
+        
+        <div class="inlinediv">
+            <h4 id="correctDisplay" class="hidden">Correct!</h4>
+            <h4 id="wrongDisplay" class="hidden">Wrong!</h4>
+        </div>
+
+    <section class="hidden" id="question1">
+        <ol>
+            <h3>Inside which HTML element do we put the JavaScript?</h3>
+            <li><button class="wrong">A. javascript</button></li>
+            <li><button class="wrong">B. js</button></li>
+            <li><button class="correct">C. script</button></li>
+            <li><button class="wrong">D. scripting</button></li>
+        </ol>
+    </section>
+    
+    <section class="hidden" id="question2">
+        <ol>
+            <h3>What is the correct syntax for referring to an external script called "script.js"?</h3>
+            <li><button class="wrong">A. script href='script.js'</button></li>
+            <li><button class="wrong">B. script name='script.js</button></li>
+            <li><button class="wrong">C. All of the above</button></li>
+            <li><button class="correct">D. script src='script.js</button></li>
+        </ol>
+    </section>
+    
+    <section class="hidden" id="question3">
+        <ol>
+            <h3>How do you round the number 7.25, to the nearest integer?</h3>
+            <li><button class="correct">A. Math.round(7.25)</button></li>
+            <li><button class="wrong">B. Math.rnd(7.25)</button></li>
+            <li><button class="wrong">C. round(7.25)</button></li>
+            <li><button class="wrong">D. rnd(7.25)</button></li>
+        </ol>
+    </section>
+    
+    <form class="hidden container" id="end" >
+        <label class="label">Enter your initials:</label>
+        <input 
+        type="text" 
+        id="initials" 
+        placeholder="Initials"
+        name="usrInput">
+        </input>
+    <ol id="highScore"></ol>
+        <button type="submit" id="submitBtn" value="submit_button">Submit</button> 
+        <button id="clearLB">Clear LeaderBoard</button>
+    </form>
+    
+
+    <script type="text/javascript" src="assets/script.js"></script>
+</body>
